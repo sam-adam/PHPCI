@@ -31,12 +31,18 @@ class QFramework implements \PHPCI\Plugin
 
         if (!$build) {
             $this->phpci->logFailure('QFramework not found');
+
+            return false;
         }
 
         if (!$build instanceof Build\RemoteGitBuild) {
             $this->phpci->logFailure('');
+
+            return false;
         }
 
         $build->createWorkingCopy($this->phpci, $this->phpci->buildPath.DIRECTORY_SEPARATOR.'system');
+
+        return true;
     }
 }
