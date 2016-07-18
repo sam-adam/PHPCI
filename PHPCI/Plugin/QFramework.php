@@ -8,11 +8,11 @@ use PHPCI\Model\Build;
 use PHPCI\Model\Project;
 
 /**
- * Class QFrameworkPlugin
+ * Class QFramework
  *
  * @package PHPCI\Plugin
  */
-class QFrameworkPlugin implements \PHPCI\Plugin
+class QFramework implements \PHPCI\Plugin
 {
     private $phpci;
     private $build;
